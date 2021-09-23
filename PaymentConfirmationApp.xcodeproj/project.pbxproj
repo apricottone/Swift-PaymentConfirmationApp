@@ -13,6 +13,7 @@
 		6CCD1F2F26FC838300BF4D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CCD1F2D26FC838300BF4D6C /* Main.storyboard */; };
 		6CCD1F3126FC838500BF4D6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CCD1F3026FC838500BF4D6C /* Assets.xcassets */; };
 		6CCD1F3426FC838500BF4D6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CCD1F3226FC838500BF4D6C /* LaunchScreen.storyboard */; };
+		6CCD1F4326FC87A900BF4D6C /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD1F4226FC87A900BF4D6C /* ConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6CCD1F3026FC838500BF4D6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CCD1F3326FC838500BF4D6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CCD1F3526FC838500BF4D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CCD1F4226FC87A900BF4D6C /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				6CCD1F2726FC838300BF4D6C /* AppDelegate.swift */,
 				6CCD1F2926FC838300BF4D6C /* SceneDelegate.swift */,
 				6CCD1F2B26FC838300BF4D6C /* ViewController.swift */,
+				6CCD1F4226FC87A900BF4D6C /* ConfirmationViewController.swift */,
 				6CCD1F2D26FC838300BF4D6C /* Main.storyboard */,
 				6CCD1F3026FC838500BF4D6C /* Assets.xcassets */,
 				6CCD1F3226FC838500BF4D6C /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				6CCD1F2C26FC838300BF4D6C /* ViewController.swift in Sources */,
 				6CCD1F2826FC838300BF4D6C /* AppDelegate.swift in Sources */,
+				6CCD1F4326FC87A900BF4D6C /* ConfirmationViewController.swift in Sources */,
 				6CCD1F2A26FC838300BF4D6C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
