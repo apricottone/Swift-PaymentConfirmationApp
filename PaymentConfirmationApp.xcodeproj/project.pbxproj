@@ -14,9 +14,12 @@
 		6CCD1F3126FC838500BF4D6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CCD1F3026FC838500BF4D6C /* Assets.xcassets */; };
 		6CCD1F3426FC838500BF4D6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CCD1F3226FC838500BF4D6C /* LaunchScreen.storyboard */; };
 		6CCD1F4326FC87A900BF4D6C /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD1F4226FC87A900BF4D6C /* ConfirmationViewController.swift */; };
+		BF33B084317B3D8EA7DC9943 /* Pods_PaymentConfirmationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EFF14679826FE57A3D99D6 /* Pods_PaymentConfirmationApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12EFF14679826FE57A3D99D6 /* Pods_PaymentConfirmationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaymentConfirmationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		344B7A966DD45FABE79DDBF7 /* Pods-PaymentConfirmationApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentConfirmationApp.debug.xcconfig"; path = "Target Support Files/Pods-PaymentConfirmationApp/Pods-PaymentConfirmationApp.debug.xcconfig"; sourceTree = "<group>"; };
 		6CCD1F2426FC838300BF4D6C /* PaymentConfirmationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentConfirmationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CCD1F2726FC838300BF4D6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CCD1F2926FC838300BF4D6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		6CCD1F3326FC838500BF4D6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CCD1F3526FC838500BF4D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CCD1F4226FC87A900BF4D6C /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		E7B82C603BFA88D77C940F6D /* Pods-PaymentConfirmationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentConfirmationApp.release.xcconfig"; path = "Target Support Files/Pods-PaymentConfirmationApp/Pods-PaymentConfirmationApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF33B084317B3D8EA7DC9943 /* Pods_PaymentConfirmationApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				6CCD1F2626FC838300BF4D6C /* PaymentConfirmationApp */,
 				6CCD1F2526FC838300BF4D6C /* Products */,
+				D1899655AC6E1764E5EE3716 /* Pods */,
+				DA6E6935898E8C18D888F506 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,24 @@
 			path = PaymentConfirmationApp;
 			sourceTree = "<group>";
 		};
+		D1899655AC6E1764E5EE3716 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				344B7A966DD45FABE79DDBF7 /* Pods-PaymentConfirmationApp.debug.xcconfig */,
+				E7B82C603BFA88D77C940F6D /* Pods-PaymentConfirmationApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DA6E6935898E8C18D888F506 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12EFF14679826FE57A3D99D6 /* Pods_PaymentConfirmationApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6CCD1F3826FC838500BF4D6C /* Build configuration list for PBXNativeTarget "PaymentConfirmationApp" */;
 			buildPhases = (
+				03F72210596FD5A15A631F11 /* [CP] Check Pods Manifest.lock */,
 				6CCD1F2026FC838300BF4D6C /* Sources */,
 				6CCD1F2126FC838300BF4D6C /* Frameworks */,
 				6CCD1F2226FC838300BF4D6C /* Resources */,
+				FAED45EEDF2D7D7BD6AD29D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,6 +161,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03F72210596FD5A15A631F11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PaymentConfirmationApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAED45EEDF2D7D7BD6AD29D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaymentConfirmationApp/Pods-PaymentConfirmationApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaymentConfirmationApp/Pods-PaymentConfirmationApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PaymentConfirmationApp/Pods-PaymentConfirmationApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6CCD1F2026FC838300BF4D6C /* Sources */ = {
@@ -287,6 +356,7 @@
 		};
 		6CCD1F3926FC838500BF4D6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 344B7A966DD45FABE79DDBF7 /* Pods-PaymentConfirmationApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +376,7 @@
 		};
 		6CCD1F3A26FC838500BF4D6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7B82C603BFA88D77C940F6D /* Pods-PaymentConfirmationApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
