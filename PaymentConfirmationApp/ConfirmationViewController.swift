@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ConfirmationViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let cellId = "cellId"
+    
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +23,20 @@ class ConfirmationViewController: UIViewController {
 }
 
 extension ConfirmationViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        let paymentData = realm.objects(Payment.self)
+        return paymentData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        let paymentData = realm.objects(Payment.self)
+        cell.textLabel!.text = "\(paymentData[indexPath.row].item)"
+        cell.detailTextLabel!.text = "\(paymentData[indexPath.row].item) ¥\(paymentData[indexPath.row].cost)"
         return cell
     }
     
