@@ -27,7 +27,11 @@ class ViewController: UIViewController {
 
     // Register
     @IBAction func registerButtonAction(_ sender: Any) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        
         let payment = Payment()
+        payment.date = "\(formatter.string(from: datePicker.date))"
         payment.item = itemField.text!
         payment.cost = Int(costField.text!)!
         try! realm.write {

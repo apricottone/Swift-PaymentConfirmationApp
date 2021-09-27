@@ -35,7 +35,7 @@ extension ConfirmationViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         let paymentData = realm.objects(Payment.self)
-        cell.textLabel!.text = "\(paymentData[indexPath.row].item)"
+        cell.textLabel!.text = "\(paymentData[indexPath.row].date)"
         cell.detailTextLabel!.text = "\(paymentData[indexPath.row].item) ¥\(paymentData[indexPath.row].cost)"
         return cell
     }
