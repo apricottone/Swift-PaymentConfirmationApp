@@ -1,4 +1,5 @@
 PODS:
+  - PKHUD (5.3.0)
   - Realm (10.12.0):
     - Realm/Headers (= 10.12.0)
   - Realm/Headers (10.12.0)
@@ -6,17 +7,20 @@ PODS:
     - Realm (= 10.12.0)
 
 DEPENDENCIES:
+  - PKHUD
   - RealmSwift
 
 SPEC REPOS:
   trunk:
+    - PKHUD
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
+  PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   Realm: 32488213acb44660539c619d620cec1bac046166
   RealmSwift: 0abdca6231d5ff8a4f84cef9c1121ef95a483faf
 
-PODFILE CHECKSUM: 02aa6e4cce5ab3cb7bea4313d66171a61125e342
+PODFILE CHECKSUM: c352772c6a18bcceab6e24dc7a57d2ec68e93b20
 
 COCOAPODS: 1.10.1

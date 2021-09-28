@@ -7,4 +7,5 @@ target 'PaymentConfirmationApp' do
 
   # Pods for PaymentConfirmationApp
   pod 'RealmSwift'
+  pod 'PKHUD'
 end

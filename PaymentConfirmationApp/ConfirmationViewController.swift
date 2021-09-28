@@ -36,9 +36,18 @@ extension ConfirmationViewController: UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         let paymentData = realm.objects(Payment.self)
         cell.textLabel!.text = "\(paymentData[indexPath.row].date)"
-        cell.detailTextLabel!.text = "\(paymentData[indexPath.row].item) ¥\(paymentData[indexPath.row].cost)"
+        cell.detailTextLabel!.text = "\(paymentData[indexPath.row].item)　¥\(paymentData[indexPath.row].cost)"
         return cell
     }
     
+    // Delete Selected Cell
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        try! realm.write {
+            let paymentData = realm.objects(Payment.self)
+            let selectedCell = paymentData[indexPath.row]
+            realm.delete(selectedCell)
+        }
+        tableView.deleteRows(at: [indexPath], with: .fade)
+    }
     
 }

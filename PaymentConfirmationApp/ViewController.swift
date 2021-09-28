@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import PKHUD
 
 class ViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -23,13 +24,15 @@ class ViewController: UIViewController {
         // Console
         let paymentData = realm.objects(Payment.self)
         print("すべてのデータ\(paymentData)")
+//        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
     }
 
     // Register
     @IBAction func registerButtonAction(_ sender: Any) {
+        // Date Formatting
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
-        
+        // Save to Realm
         let payment = Payment()
         payment.date = "\(formatter.string(from: datePicker.date))"
         payment.item = itemField.text!
@@ -37,6 +40,12 @@ class ViewController: UIViewController {
         try! realm.write {
             realm.add(payment)
         }
+        
+        itemField.text = ""
+        costField.text = ""
+        
+        // Success Animation
+        HUD.flash(.success, delay: 1.0)
     }
     
 }
