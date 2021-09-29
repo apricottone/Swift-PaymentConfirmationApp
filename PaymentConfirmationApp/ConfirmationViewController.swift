@@ -19,7 +19,6 @@ class ConfirmationViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
 }
 
 extension ConfirmationViewController: UITableViewDelegate, UITableViewDataSource {
@@ -40,7 +39,7 @@ extension ConfirmationViewController: UITableViewDelegate, UITableViewDataSource
         return cell
     }
     
-    // Delete Selected Cell
+    // Delete selected cell
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         try! realm.write {
             let paymentData = realm.objects(Payment.self)
