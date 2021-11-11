@@ -32,6 +32,14 @@ class ViewController: UIViewController {
     
     // When the keyboard is displayed
     @objc private func keyboardWillShow(sender: NSNotification) {
+        if itemField.isFirstResponder {
+            guard let userInfo = sender.userInfo else { return }
+            let duration: Float = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! NSNumber).floatValue
+            UIView.animate(withDuration: TimeInterval(duration), animations: { () -> Void in
+                let transform = CGAffineTransform(translationX: 0, y: -150)
+                self.view.transform = transform
+            })
+        }
         if costField.isFirstResponder {
             guard let userInfo = sender.userInfo else { return }
             let duration: Float = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! NSNumber).floatValue
